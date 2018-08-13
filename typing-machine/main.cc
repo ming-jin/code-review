@@ -7,6 +7,9 @@
 #include "typing_machine.h"
 #include "getch.h"
 
+#include "node_test.h"
+#include "typing_machine_test.h"
+
 const char full_board[5][34] = {
   "+-------+   +-------+   +-------+",
   "|       |   |       |   |       |",
@@ -144,6 +147,9 @@ void TestTypingMachine() {
 int main() {
   puts("1: Test Node.");
   puts("2: Test Typing Machine.");
+  puts("3: Run Unit Test Node.");
+  puts("4: Run Unit Test Typing Machine.");
+
   while (true) {
     int user_key = GetKeyInput();
     if (user_key == '1') {
@@ -154,6 +160,14 @@ int main() {
       TestTypingMachine();
       return 0;
     }
+	if (user_key == '3') {
+		NodeTest();
+		return 0;
+	}
+	if (user_key == '4') {
+		TypingMachineTest();
+		return 0;
+	}
   }
 }
 
