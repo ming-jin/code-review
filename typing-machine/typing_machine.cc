@@ -6,17 +6,17 @@ TypingMachine::TypingMachine() {
 	tailNode = new Node(0);
 	keyNode = headerNode = cursorNode = tailNode;
 	typedStringLength = 0;
-  return;
+	return;
 }
 
 void TypingMachine::HomeKey() {
 	cursorNode = headerNode;
-  return;
+	return;
 }
 
 void TypingMachine::EndKey() {
 	cursorNode = tailNode;
-  return;
+	return;
 }
 
 void TypingMachine::LeftKey() {
@@ -38,8 +38,9 @@ bool TypingMachine::TypeKey(char key) {
 
 	if (key >= 32 && key <= 126) {
 		cursorNode->InsertPreviousNode(key);
-		if (!cursorNode->GetPreviousNode()->GetPreviousNode()) {
-			headerNode = cursorNode->GetPreviousNode();
+		Node* newlyAddedNode = cursorNode->GetPreviousNode();
+		if (!newlyAddedNode->GetPreviousNode()) {
+			headerNode = newlyAddedNode;
 		}
 		typedStringLength++;
 		return true;
