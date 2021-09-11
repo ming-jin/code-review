@@ -121,7 +121,7 @@ void TestTypingMachine() {
         break;
       }
       case '2': {
-        tape.RightKey();
+        tape.RightKey(); 
         break;
       }
       case '3': {
