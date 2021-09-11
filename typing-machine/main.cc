@@ -116,12 +116,12 @@ void TestTypingMachine() {
     puts(tape.Print('|').c_str());
     int user_key = GetKeyInput();
     switch (user_key) {
-      case '1': {
+      case '1': { 
         tape.LeftKey();
         break;
       }
       case '2': {
-        tape.RightKey();
+        tape.RightKey(); 
         break;
       }
       case '3': {
