@@ -116,7 +116,7 @@ void TestTypingMachine() {
     puts(tape.Print('|').c_str());
     int user_key = GetKeyInput();
     switch (user_key) {
-      case '1': {
+      case '1': { 
         tape.LeftKey();
         break;
       }
