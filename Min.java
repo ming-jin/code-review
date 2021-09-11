@@ -1,6 +1,7 @@
 /**
   * Refer to Java documentation if needed:
   * https://docs.oracle.com/javase/8/docs/api/index-files/index-1.html
+  * Created by Ming Jin
   */
 
 import java.util.*;
@@ -10,7 +11,7 @@ public class Min
   /**
     * Returns the mininum element in a list
     * @param list Comparable list of elements to search
-    * @return the minimum element in the list
+    * @return the minimum element in the list 
     * @throws NullPointerException if list is null or
     *         if any list elements are null
     * @throws ClassCastException
@@ -25,6 +26,7 @@ public class Min
       Iterator<? extends T> itr = list.iterator();
       T result = itr.next();
 
+      // TODO @ming-jin check other conditions 
       if (result == null)
         throw new NullPointerException("Min.min");
 
